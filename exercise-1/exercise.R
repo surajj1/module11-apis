@@ -1,22 +1,26 @@
 ### Exercise 1 ###
 
 # Load the httr and jsonlite libraries for accessing data
-
+install.packages("httr")
+install.packages("jsonlite")
+library("httr")
+library("jsonlite")
 
 ## For these questions, look at the API documentation to identify the appropriate endpoint and information.
 ## Then send GET() request to fetch the data, then extract the answer to the question
 
 # For what years does the API have statistical data?
-
+2000 - 2013
 
 # What is the "country code" for the "Syrian Arab Republic"?
-
+SYR
 
 # How many persons of concern from Syria applied for residence in the USA in 2013?
 # Hint: you'll need to use a query parameter
 # Use the `str()` function to print the data of interest
 # See http://www.unhcr.org/en-us/who-we-help.html for details on these terms
 
+[{"year":2013,"country_of_residence":"USA","country_of_residence_en":"United States","country_of_origin":"SYR","country_of_origin_en":"Syrian Arab Republic","refugees":"3802","asylum_seekers":"1378","returned_refugees":null,"idps":null,"returned_idps":null,"stateless_persons":null,"others_of_concern":null,"total_population":"5180"}]
 
 ## And this was only 2013...
 
